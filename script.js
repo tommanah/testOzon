@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       element.style.transition = 'opacity 0.7s ease';
       setTimeout(() => {
         element.style.opacity = '0';
+        successText.style.opacity = '0';
       }, 100); 
     };
   
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         element.style.transition = 'opacity 0.7s ease';
         element.style.opacity = '1';
+        successText.style.opacity= '1';
       }, 100);
     };
   
