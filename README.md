@@ -3,9 +3,9 @@
 
 приложение доступно по ссылке - https://tommanah.github.io/
 
-#установка
+установка
 git clone https://github.com/tommanah/tommanah.github.io
 cd project
 
-#запуск 
+запуск 
 открыть файл .html в браузере
