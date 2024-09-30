@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressValueInput = document.getElementById('progressValue');
     const animateCheckbox = document.getElementById('isAnimate');
     const hiddenCheckbox = document.getElementById('isHidden');
+    const successText = document.querySelector('.successText');
   
     let currentValue = 50; 
     progressValueInput.value = currentValue;
@@ -10,27 +11,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const hideElementWithAnimation = (element) => {
-      element.style.transition = 'opacity 0.5s ease';
-      element.style.opacity = '0';
+      element.style.transition = 'opacity 0.7s ease';
       setTimeout(() => {
-        element.style.display = 'none';
-      }, 500); 
+        element.style.opacity = '0';
+      }, 100); 
     };
   
     const showElementWithAnimation = (element) => {
       element.style.display = 'block';
       element.style.opacity = '0';
       setTimeout(() => {
-        element.style.transition = 'opacity 0.5s ease';
+        element.style.transition = 'opacity 0.7s ease';
         element.style.opacity = '1';
-      }, 10);
+      }, 100);
     };
   
+
     function updateProgressBar(value) {
       const degrees = (value / 100) * 360;
-      const progressColor = value === 100 ? '#74ff7d' : '#2146ff'; 
+      const progressColor = value === 100 ? '#13bb00' : '#2146ff'; 
+
       progressBar.style.background = `conic-gradient(${progressColor} ${degrees}deg, #ededed ${degrees}deg)`;
-    }
+      if (value === 100) {
+        successText.style.display = 'flex'; 
+      } else {
+        successText.style.display = 'none'; 
+      }
+}
   
     function animateProgressBar(startValue, endValue) {
       const duration = 1000; 

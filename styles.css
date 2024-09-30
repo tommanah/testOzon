@@ -11,11 +11,20 @@ body {
     font-weight: 550;
     letter-spacing: 1px;
     padding: 10px;
-    max-width: 320px;
-    max-height: 568px;
+  }
+
+  .successText {
+    position: absolute;
+    color: #13bb00;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
   }
   
   .container {
+    max-width: 320px;
+    max-height: 568px;
     display: grid;
     grid-template-rows: auto auto;
     justify-items: center;
@@ -137,15 +146,20 @@ body {
   
   @media (orientation: landscape) {
     .body{
-        max-width: 568px;
-        max-height: 320px;
+        display: flex;
+        justify-content: center;
     }
 
     .container {
+        max-width: 568px;
+        max-height: 320px;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
         margin: auto;
         justify-items: center;
+        gap: 10px;
+        box-sizing: border-box; 
+        -webkit-box-align: center;
     }
 
     h3 {
