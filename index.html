@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Progress bar</title>
+</head>
+<body>
+    <h3>Progress</h3>
+    <div class="container">
+        <div class="progress" value="0" style="--value: 0deg;"></div>
+        <div class="controllers">
+            <div class="lol">
+                <input type="number" id="progressValue" min="0" max="100">
+                <label for="progressValue" class="value"></label>
+                Value
+            </div>
+            <div class="lol">
+                <input type="checkbox" id="isAnimate" class="checkbox">
+                <label for="isAnimate" class="switcher"></label>
+                Animate
+            </div>
+            <div class="lol">
+                <input type="checkbox" id="isHidden" class="checkbox">
+                <label for="isHidden" class="switcher"></label>
+                Hidden
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
